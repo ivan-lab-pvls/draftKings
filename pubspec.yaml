@@ -21,6 +21,7 @@ dependencies:
   flutter_launcher_icons: ^0.13.1
   shared_preferences: ^2.2.2
   loading_animation_widget: ^1.2.0+4
+  flutter_countdown_timer: ^4.1.0
 
   cupertino_icons: ^1.0.2
 
@@ -41,6 +42,38 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/images/loading/
+    - assets/images/onboarding/
+    - assets/images/elements/
+    - assets/images/news/
+    - assets/images/news/basketball/
+    - assets/images/news/football/
+    - assets/images/quiz/
+    - assets/images/quiz/quiz-1/
+    - assets/images/quiz/quiz-2/
+    - assets/images/quiz/quiz-3/
+    - assets/images/puzzle/
+    - assets/images/puzzle/basketball/1/
+    - assets/images/puzzle/basketball/2/
+    - assets/images/puzzle/basketball/3/
+    - assets/images/puzzle/basketball/4/
+    - assets/images/puzzle/basketball/5/
+    - assets/images/puzzle/basketball/6/
+    - assets/images/puzzle/basketball/7/
+    - assets/images/puzzle/basketball/8/
+    - assets/images/puzzle/basketball/9/
+    - assets/images/puzzle/basketball/10/
+    - assets/images/puzzle/football/
+    - assets/images/puzzle/football/1/
+    - assets/images/puzzle/football/2/
+    - assets/images/puzzle/football/3/
+    - assets/images/puzzle/football/4/
+    - assets/images/puzzle/football/5/
+    - assets/images/puzzle/football/6/
+    - assets/images/puzzle/football/7/
+    - assets/images/puzzle/football/8/
+    - assets/images/puzzle/football/9/
+    - assets/images/puzzle/football/10/
 
 
   fonts:

@@ -12,5 +12,6 @@ class DraftkingsApp extends StatelessWidget {
       theme: ThemeData(fontFamily: 'Montserrat'),
       routerConfig: _appRouter.config(),
       debugShowCheckedModeBanner: false,
-    );  }
+    );
+  }
 }
