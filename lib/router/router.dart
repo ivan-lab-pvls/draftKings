@@ -6,6 +6,8 @@ import 'package:draftkings_app/screens/main/main_screen.dart';
 import 'package:draftkings_app/screens/news/news_info/news_info_screen.dart';
 import 'package:draftkings_app/screens/onboarding/onboarding_screen.dart';
 import 'package:draftkings_app/models/news_model.dart';
+import 'package:draftkings_app/screens/puzzle/complete_puzzle_screen.dart';
+import 'package:draftkings_app/screens/puzzle/fail_puzzle_screen.dart';
 import 'package:draftkings_app/screens/puzzle/puzzle_screen.dart';
 import 'package:draftkings_app/screens/quiz/complete_quiz_screen.dart';
 import 'package:draftkings_app/screens/quiz/fail_quiz_screen.dart';
@@ -32,6 +34,7 @@ class AppRouter extends _$AppRouter {
     AutoRoute(page: CompleteQuizRoute.page),
     AutoRoute(page: FailQuizRoute.page),
     AutoRoute(page: PuzzleRoute.page),
-
+    AutoRoute(page: CompletePuzzleRoute.page),
+    AutoRoute(page: FailPuzzleRoute.page),
   ];
 }

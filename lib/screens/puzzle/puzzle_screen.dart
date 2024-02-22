@@ -1,13 +1,13 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:draftkings_app/models/puzzle_model.dart';
 import 'package:draftkings_app/models/puzzle_pieces_model.dart';
+import 'package:draftkings_app/router/router.dart';
 import 'package:draftkings_app/theme/colors.dart';
 import 'package:draftkings_app/widgets/action_button_widget.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 
 @RoutePage()
 class PuzzleScreen extends StatefulWidget {
@@ -34,7 +34,8 @@ class _PuzzleScreenState extends State<PuzzleScreen> {
   void initState() {
     initialPuzzle();
     currentSequence = puzzlePieces.toList()..shuffle();
-    correctSequence = puzzlePieces.toList()..sort((a, b) => a.index.compareTo(b.index));
+    correctSequence = puzzlePieces.toList()
+      ..sort((a, b) => a.index.compareTo(b.index));
     super.initState();
   }
 
@@ -49,26 +50,17 @@ class _PuzzleScreenState extends State<PuzzleScreen> {
 
   void checkSequence() {
     if (listEquals(currentSequence, correctSequence)) {
-      showDialog(
-        context: context,
-        builder: (BuildContext context) {
-          return AlertDialog(
-            title: Text('Congratulations!'),
-            content: Text('You solved the puzzle!'),
-            actions: <Widget>[
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: Text('OK'),
-              ),
-            ],
-          );
-        },
-      );
+      isWin = true;
+      final int _timeSpendInt =
+          DateTime.now().millisecondsSinceEpoch - startGameTime;
+      final Duration _timeSpend = Duration(milliseconds: _timeSpendInt);
+      context.router.push(CompletePuzzleRoute(
+          puzzle: widget.puzzle,
+          timeSpend:
+              '${_timeSpend.inMinutes.remainder(60).toString()}:${_timeSpend.inSeconds.remainder(60).toString()}',
+          title: widget.title));
     }
   }
-
 
   void swapPieces(int index1, int index2) {
     List<PuzzlePieceModel> newSequence = List.from(currentSequence);
@@ -110,21 +102,18 @@ class _PuzzleScreenState extends State<PuzzleScreen> {
                   GestureDetector(
                     onTap: () {
                       isWin = true;
-                      context.router.pop();
+                      context.router.push(MainRoute());
                     },
                     child: SvgPicture.asset(
                         'assets/images/elements/arrow-back.svg'),
                   ),
                   Container(
-                    padding:
-                    EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                    padding: EdgeInsets.symmetric(vertical: 12, horizontal: 16),
                     width: 250,
                     decoration: BoxDecoration(
                         color: AppColors.grey,
-                        border:
-                        Border.all(color: AppColors.green, width: 2),
-                        borderRadius:
-                        BorderRadius.all(Radius.circular(12.0))),
+                        border: Border.all(color: AppColors.green, width: 2),
+                        borderRadius: BorderRadius.all(Radius.circular(12.0))),
                     child: Text(
                       widget.title,
                       textAlign: TextAlign.center,
@@ -144,14 +133,11 @@ class _PuzzleScreenState extends State<PuzzleScreen> {
                     padding: EdgeInsets.all(12),
                     decoration: BoxDecoration(
                         color: AppColors.grey,
-                        border:
-                        Border.all(color: Colors.transparent),
-                        borderRadius: BorderRadius.all(
-                            Radius.circular(18.0))),
+                        border: Border.all(color: Colors.transparent),
+                        borderRadius: BorderRadius.all(Radius.circular(18.0))),
                     child: Row(
                       children: [
-                        SvgPicture.asset(
-                            'assets/images/elements/timer.svg'),
+                        SvgPicture.asset('assets/images/elements/timer.svg'),
                         SizedBox(width: 5),
                         Text(
                           'Time: ',
@@ -165,13 +151,13 @@ class _PuzzleScreenState extends State<PuzzleScreen> {
                           child: CountdownTimer(
                             endWidget: Center(
                                 child: Text(
-                                  '00 : 00 : 00',
-                                  style: TextStyle(
-                                    color: AppColors.green,
-                                    fontSize: 16,
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                )),
+                              '00 : 00 : 00',
+                              style: TextStyle(
+                                color: AppColors.green,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            )),
                             textStyle: TextStyle(
                               color: AppColors.green,
                               fontSize: 16,
@@ -179,11 +165,11 @@ class _PuzzleScreenState extends State<PuzzleScreen> {
                             ),
                             endTime: endTime(),
                             onEnd: () {
-                              // if (isWin = false) {
-                              //   context.router.push(FailQuizRoute(
-                              //       quiz: widget.quiz,
-                              //       result: result));
-                              // }
+                              if (isWin = false) {
+                                context.router.push(FailPuzzleRoute(
+                                    puzzle: widget.puzzle,
+                                    title: widget.title));
+                              }
                             },
                           ),
                         ),
@@ -204,18 +190,23 @@ class _PuzzleScreenState extends State<PuzzleScreen> {
                   child: Image.asset(widget.puzzle.image),
                 ),
               ),
-              ActionButtonWidget(text: 'Shuffle', color: AppColors.green, width: 250, onTap: () {
-                shuffleSequence();
-              }),
+              ActionButtonWidget(
+                  text: 'Shuffle',
+                  color: AppColors.green,
+                  width: 250,
+                  onTap: () {
+                    shuffleSequence();
+                  }),
               Container(
                 padding: EdgeInsets.all(10),
-                color:AppColors.grey,
+                color: AppColors.grey,
                 height: 350,
                 width: 350,
                 child: Center(
                   child: GridView.builder(
-                    gridDelegate:
-                    SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4),
+                    physics: NeverScrollableScrollPhysics(),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 4),
                     itemCount: currentSequence.length,
                     itemBuilder: (context, index) {
                       PuzzlePieceModel piece = currentSequence[index];

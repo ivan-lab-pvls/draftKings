@@ -62,7 +62,7 @@ class _QuizScreenState extends State<QuizScreen> {
                       GestureDetector(
                         onTap: () {
                           isWin = true;
-                          context.router.pop();
+                          context.router.push(MainRoute());
                         },
                         child: SvgPicture.asset(
                             'assets/images/elements/arrow-back.svg'),

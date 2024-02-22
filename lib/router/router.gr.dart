@@ -21,6 +21,18 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const AboutScreen(),
       );
     },
+    CompletePuzzleRoute.name: (routeData) {
+      final args = routeData.argsAs<CompletePuzzleRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: CompletePuzzleScreen(
+          key: args.key,
+          puzzle: args.puzzle,
+          timeSpend: args.timeSpend,
+          title: args.title,
+        ),
+      );
+    },
     CompleteQuizRoute.name: (routeData) {
       final args = routeData.argsAs<CompleteQuizRouteArgs>();
       return AutoRoutePage<dynamic>(
@@ -30,6 +42,17 @@ abstract class _$AppRouter extends RootStackRouter {
           quiz: args.quiz,
           timeSpend: args.timeSpend,
           result: args.result,
+        ),
+      );
+    },
+    FailPuzzleRoute.name: (routeData) {
+      final args = routeData.argsAs<FailPuzzleRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: FailPuzzleScreen(
+          key: args.key,
+          puzzle: args.puzzle,
+          title: args.title,
         ),
       );
     },
@@ -117,6 +140,54 @@ class AboutRoute extends PageRouteInfo<void> {
 }
 
 /// generated route for
+/// [CompletePuzzleScreen]
+class CompletePuzzleRoute extends PageRouteInfo<CompletePuzzleRouteArgs> {
+  CompletePuzzleRoute({
+    Key? key,
+    required PuzzleModel puzzle,
+    required String timeSpend,
+    required String title,
+    List<PageRouteInfo>? children,
+  }) : super(
+          CompletePuzzleRoute.name,
+          args: CompletePuzzleRouteArgs(
+            key: key,
+            puzzle: puzzle,
+            timeSpend: timeSpend,
+            title: title,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'CompletePuzzleRoute';
+
+  static const PageInfo<CompletePuzzleRouteArgs> page =
+      PageInfo<CompletePuzzleRouteArgs>(name);
+}
+
+class CompletePuzzleRouteArgs {
+  const CompletePuzzleRouteArgs({
+    this.key,
+    required this.puzzle,
+    required this.timeSpend,
+    required this.title,
+  });
+
+  final Key? key;
+
+  final PuzzleModel puzzle;
+
+  final String timeSpend;
+
+  final String title;
+
+  @override
+  String toString() {
+    return 'CompletePuzzleRouteArgs{key: $key, puzzle: $puzzle, timeSpend: $timeSpend, title: $title}';
+  }
+}
+
+/// generated route for
 /// [CompleteQuizScreen]
 class CompleteQuizRoute extends PageRouteInfo<CompleteQuizRouteArgs> {
   CompleteQuizRoute({
@@ -161,6 +232,49 @@ class CompleteQuizRouteArgs {
   @override
   String toString() {
     return 'CompleteQuizRouteArgs{key: $key, quiz: $quiz, timeSpend: $timeSpend, result: $result}';
+  }
+}
+
+/// generated route for
+/// [FailPuzzleScreen]
+class FailPuzzleRoute extends PageRouteInfo<FailPuzzleRouteArgs> {
+  FailPuzzleRoute({
+    Key? key,
+    required PuzzleModel puzzle,
+    required String title,
+    List<PageRouteInfo>? children,
+  }) : super(
+          FailPuzzleRoute.name,
+          args: FailPuzzleRouteArgs(
+            key: key,
+            puzzle: puzzle,
+            title: title,
+          ),
+          initialChildren: children,
+        );
+
+  static const String name = 'FailPuzzleRoute';
+
+  static const PageInfo<FailPuzzleRouteArgs> page =
+      PageInfo<FailPuzzleRouteArgs>(name);
+}
+
+class FailPuzzleRouteArgs {
+  const FailPuzzleRouteArgs({
+    this.key,
+    required this.puzzle,
+    required this.title,
+  });
+
+  final Key? key;
+
+  final PuzzleModel puzzle;
+
+  final String title;
+
+  @override
+  String toString() {
+    return 'FailPuzzleRouteArgs{key: $key, puzzle: $puzzle, title: $title}';
   }
 }
 
