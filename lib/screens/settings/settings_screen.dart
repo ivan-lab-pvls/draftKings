@@ -43,7 +43,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           Navigator.of(context).push(
                             MaterialPageRoute<void>(
                                 builder: (BuildContext context) => const trmxa(
-                                      datatrms: '',
+                                      datatrms:
+                                          'https://docs.google.com/document/d/1XGur3DRQX1U1RP4ljb8tReQ4tuM38S99MwwxzBHRi9c/edit?usp=sharing',
                                     )),
                           );
                         }),
@@ -56,7 +57,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           Navigator.of(context).push(
                             MaterialPageRoute<void>(
                                 builder: (BuildContext context) => const trmxa(
-                                      datatrms: '',
+                                      datatrms:
+                                          'https://docs.google.com/document/d/1DAkIDXxDbhQrAwlaR0HDWpawhKO7dkPQclCIjE2XFgo/edit?usp=sharing',
                                     )),
                           );
                         }),
@@ -88,7 +90,7 @@ class trmxa extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.green,
       ),
       body: SafeArea(
         bottom: false,
