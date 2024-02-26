@@ -3,6 +3,7 @@ import 'package:draftkings_app/router/router.dart';
 import 'package:draftkings_app/theme/colors.dart';
 import 'package:draftkings_app/widgets/action_button_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 @RoutePage()
 class SettingsScreen extends StatefulWidget {
@@ -31,68 +32,34 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       fontWeight: FontWeight.w700),
                 ),
                 Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 6, horizontal: 18),
-                      width: 250,
-                      decoration: BoxDecoration(
-                          color: Colors.transparent,
-                          border:
-                              Border.all(color: AppColors.lightGrey, width: 2),
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(12.0))),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Sound',
-                            style: TextStyle(
-                                color: AppColors.lightGrey,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w700),
-                          ),
-                          Switch(value: false, onChanged: (value) {}),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 25),
-                    Container(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 6, horizontal: 18),
-                      width: 250,
-                      decoration: BoxDecoration(
-                          color: Colors.transparent,
-                          border:
-                              Border.all(color: AppColors.lightGrey, width: 2),
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(12.0))),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Vibro',
-                            style: TextStyle(
-                                color: AppColors.lightGrey,
-                                fontSize: 18,
-                                fontWeight: FontWeight.w700),
-                          ),
-                          Switch(value: false, onChanged: (value) {}),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 25),
                     ActionButtonWidget(
                         text: 'Privacy Policy',
                         color: AppColors.green,
                         width: 250,
-                        onTap: () {}),
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute<void>(
+                                builder: (BuildContext context) => const trmxa(
+                                      datatrms: '',
+                                    )),
+                          );
+                        }),
                     SizedBox(height: 25),
                     ActionButtonWidget(
                         text: 'Terms of Use',
                         color: AppColors.green,
                         width: 250,
-                        onTap: () {}),
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute<void>(
+                                builder: (BuildContext context) => const trmxa(
+                                      datatrms: '',
+                                    )),
+                          );
+                        }),
                     SizedBox(height: 25),
                     ActionButtonWidget(
                         text: 'About Us',
@@ -106,6 +73,27 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class trmxa extends StatelessWidget {
+  final String datatrms;
+
+  const trmxa({Key? key, required this.datatrms}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red,
+      ),
+      body: SafeArea(
+        bottom: false,
+        child: InAppWebView(
+          initialUrlRequest: URLRequest(url: Uri.parse(datatrms)),
         ),
       ),
     );

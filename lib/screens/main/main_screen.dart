@@ -19,7 +19,7 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
   late TabController _tabController = TabController(length: 5, vsync: this);
 
-  final List<Widget> _tabs = [
+  final List<Widget> _tabs = const [
     NewsScreen(),
     FavouriteNewsScreen(),
     QuizListScreen(),
@@ -34,8 +34,7 @@ class _MainScreenState extends State<MainScreen> with TickerProviderStateMixin {
   }
 
   void _handleTabSelection() {
-    setState(() {
-    });
+    setState(() {});
   }
 
   @override

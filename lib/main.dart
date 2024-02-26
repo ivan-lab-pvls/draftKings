@@ -1,4 +1,4 @@
-import 'package:draftkings_app/draftkings_app.dart';
+import 'package:draftkings_app/draft.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -11,5 +11,5 @@ void main() {
     DeviceOrientation.portraitDown,
   ]);
 
-  runApp(DraftkingsApp());
+  runApp(DraftApp());
 }
