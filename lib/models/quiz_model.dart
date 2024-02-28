@@ -1,4 +1,4 @@
-import 'package:draftkings_app/models/question_model.dart';
+import 'package:DK_app/models/question_model.dart';
 
 class QuizModel {
   final String title;

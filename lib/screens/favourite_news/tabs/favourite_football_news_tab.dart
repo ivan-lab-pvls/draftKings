@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:draftkings_app/models/news_model.dart';
-import 'package:draftkings_app/repository/football_news_repository.dart';
-import 'package:draftkings_app/router/router.dart';
-import 'package:draftkings_app/screens/news/widgets/news_card_widget.dart';
-import 'package:draftkings_app/theme/colors.dart';
+import 'package:DK_app/models/news_model.dart';
+import 'package:DK_app/repository/football_news_repository.dart';
+import 'package:DK_app/router/router.dart';
+import 'package:DK_app/screens/news/widgets/news_card_widget.dart';
+import 'package:DK_app/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class FavouriteFootballNewsTab extends StatefulWidget {

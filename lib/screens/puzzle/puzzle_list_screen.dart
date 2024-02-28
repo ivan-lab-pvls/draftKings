@@ -1,6 +1,6 @@
-import 'package:draftkings_app/screens/puzzle/tabs/basketball_puzzles_tab.dart';
-import 'package:draftkings_app/screens/puzzle/tabs/football_puzzles_tab.dart';
-import 'package:draftkings_app/theme/colors.dart';
+import 'package:DK_app/screens/puzzle/tabs/basketball_puzzles_tab.dart';
+import 'package:DK_app/screens/puzzle/tabs/football_puzzles_tab.dart';
+import 'package:DK_app/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class PuzzleListScreen extends StatefulWidget {

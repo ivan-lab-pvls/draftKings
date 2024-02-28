@@ -1,4 +1,4 @@
-import 'package:draftkings_app/models/news_model.dart';
+import 'package:DK_app/models/news_model.dart';
 
 final List<NewsModel> footballNewsRepository = [
   NewsModel(
@@ -66,7 +66,7 @@ T.J. Watt dismissive of critique by Steelers legend | Allison Koehler, Steelers 
 The dynamics of the Pittsburgh Steelers locker room were under a microscope for much of the team’s 2023 season. Star defender T.J. Watt was pressed about it in an interview during Super Bowl 58 media week, particularly as it pertained to Ben Roethlisberger’s criticism of Steelers tradition last December.
 “At the end of the day, it’s all about the guys in the locker room and it’s hard for people on the outside to truly get a feel for what’s going on on the inside,” Watt said in a Feb. 8 interview with Yahoo Sports’ Jason Fitz.
 RELATED
-Steelers officially odds favorites to land Justin Fields on DraftKings Sportsbook 
+Steelers officially odds favorites to land Justin Fields on DK Sportsbook 
 Steelers, Bears Expected to Talk QB Trade | Noah Strackbein, All Steelers
 PITTSBURGH — The Pittsburgh Steelers are looking for a quarterback this offseason, and Justin Fields could be climbing up their list. According to NFL insider Benjamin Allbright, Pittsburgh is expected to call the Chicago Bears for their former first-round pick.
 Allbright says the Steelers are one of three teams he expects to call Chicago for Fields. ESPN’s Adam Schefter also noted head coach Mike Tomlin is a big fan of Fields, and that Pittsburgh is going to look for outside options to bring in.

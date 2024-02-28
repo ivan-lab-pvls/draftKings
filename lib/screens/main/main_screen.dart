@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:draftkings_app/screens/favourite_news/favourite_news_screen.dart';
-import 'package:draftkings_app/screens/news/news_screen.dart';
-import 'package:draftkings_app/screens/puzzle/puzzle_list_screen.dart';
-import 'package:draftkings_app/screens/quiz/quiz_list_screen.dart';
-import 'package:draftkings_app/screens/settings/settings_screen.dart';
-import 'package:draftkings_app/theme/colors.dart';
+import 'package:DK_app/screens/favourite_news/favourite_news_screen.dart';
+import 'package:DK_app/screens/news/news_screen.dart';
+import 'package:DK_app/screens/puzzle/puzzle_list_screen.dart';
+import 'package:DK_app/screens/quiz/quiz_list_screen.dart';
+import 'package:DK_app/screens/settings/settings_screen.dart';
+import 'package:DK_app/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

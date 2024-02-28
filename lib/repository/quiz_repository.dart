@@ -1,5 +1,5 @@
-import 'package:draftkings_app/models/question_model.dart';
-import 'package:draftkings_app/models/quiz_model.dart';
+import 'package:DK_app/models/question_model.dart';
+import 'package:DK_app/models/quiz_model.dart';
 
 final List<QuizModel> quizRepository = [
   QuizModel(

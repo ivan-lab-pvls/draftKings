@@ -1,4 +1,4 @@
-import 'package:draftkings_app/router/router.dart';
+import 'package:DK_app/router/router.dart';
 import 'package:flutter/material.dart';
 
 class DraftApp extends StatelessWidget {

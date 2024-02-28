@@ -1,4 +1,4 @@
-import 'package:draftkings_app/theme/colors.dart';
+import 'package:DK_app/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class OnboardingCardWidget extends StatelessWidget {

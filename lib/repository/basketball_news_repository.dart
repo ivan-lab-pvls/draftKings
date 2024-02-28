@@ -1,4 +1,4 @@
-import 'package:draftkings_app/models/news_model.dart';
+import 'package:DK_app/models/news_model.dart';
 
 final List<NewsModel> basketballNewsRepository = [
   NewsModel(

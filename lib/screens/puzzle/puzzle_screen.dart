@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:draftkings_app/models/puzzle_model.dart';
-import 'package:draftkings_app/models/puzzle_pieces_model.dart';
-import 'package:draftkings_app/router/router.dart';
-import 'package:draftkings_app/theme/colors.dart';
-import 'package:draftkings_app/widgets/action_button_widget.dart';
+import 'package:DK_app/models/puzzle_model.dart';
+import 'package:DK_app/models/puzzle_pieces_model.dart';
+import 'package:DK_app/router/router.dart';
+import 'package:DK_app/theme/colors.dart';
+import 'package:DK_app/widgets/action_button_widget.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_countdown_timer/flutter_countdown_timer.dart';

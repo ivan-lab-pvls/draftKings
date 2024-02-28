@@ -1,6 +1,6 @@
-import 'package:draftkings_app/screens/news/tabs/basketball_news_tab.dart';
-import 'package:draftkings_app/screens/news/tabs/football_news_tab.dart';
-import 'package:draftkings_app/theme/colors.dart';
+import 'package:DK_app/screens/news/tabs/basketball_news_tab.dart';
+import 'package:DK_app/screens/news/tabs/football_news_tab.dart';
+import 'package:DK_app/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class NewsScreen extends StatefulWidget {

@@ -1,8 +1,8 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:draftkings_app/models/quiz_model.dart';
-import 'package:draftkings_app/repository/quiz_repository.dart';
-import 'package:draftkings_app/router/router.dart';
-import 'package:draftkings_app/theme/colors.dart';
+import 'package:DK_app/models/quiz_model.dart';
+import 'package:DK_app/repository/quiz_repository.dart';
+import 'package:DK_app/router/router.dart';
+import 'package:DK_app/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

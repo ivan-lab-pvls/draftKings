@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:draftkings_app/models/puzzle_model.dart';
-import 'package:draftkings_app/repository/basketball_puzzle_repository.dart';
-import 'package:draftkings_app/repository/football_puzzle_repository.dart';
-import 'package:draftkings_app/router/router.dart';
-import 'package:draftkings_app/theme/colors.dart';
-import 'package:draftkings_app/widgets/action_button_widget.dart';
+import 'package:DK_app/models/puzzle_model.dart';
+import 'package:DK_app/repository/basketball_puzzle_repository.dart';
+import 'package:DK_app/repository/football_puzzle_repository.dart';
+import 'package:DK_app/router/router.dart';
+import 'package:DK_app/theme/colors.dart';
+import 'package:DK_app/widgets/action_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

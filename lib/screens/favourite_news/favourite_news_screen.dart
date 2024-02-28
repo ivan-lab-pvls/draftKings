@@ -1,6 +1,6 @@
-import 'package:draftkings_app/screens/favourite_news/tabs/favourite_basketball_news_tab.dart';
-import 'package:draftkings_app/screens/favourite_news/tabs/favourite_football_news_tab.dart';
-import 'package:draftkings_app/theme/colors.dart';
+import 'package:DK_app/screens/favourite_news/tabs/favourite_basketball_news_tab.dart';
+import 'package:DK_app/screens/favourite_news/tabs/favourite_football_news_tab.dart';
+import 'package:DK_app/theme/colors.dart';
 import 'package:flutter/material.dart';
 
 class FavouriteNewsScreen extends StatefulWidget {

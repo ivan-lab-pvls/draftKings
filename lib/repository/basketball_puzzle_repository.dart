@@ -1,5 +1,5 @@
-import 'package:draftkings_app/models/puzzle_model.dart';
-import 'package:draftkings_app/models/puzzle_pieces_model.dart';
+import 'package:DK_app/models/puzzle_model.dart';
+import 'package:DK_app/models/puzzle_pieces_model.dart';
 
 final List<PuzzleModel> basketballPuzzleRepository = [
   PuzzleModel(

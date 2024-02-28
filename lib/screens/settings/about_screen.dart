@@ -1,5 +1,5 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:draftkings_app/theme/colors.dart';
+import 'package:DK_app/theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -52,7 +52,7 @@ class _AboutScreenState extends State<AboutScreen> {
                   ),
                   SizedBox(height: 30),
                   Text(
-                    '''Draftkings - Win Online is the perfect sports companion for all basketball and American football enthusiasts. With this app, you can stay updated on the latest news through a user-friendly interface and the option to save your favorite articles.
+                    '''DK - Win Online is the perfect sports companion for all basketball and American football enthusiasts. With this app, you can stay updated on the latest news through a user-friendly interface and the option to save your favorite articles.
 Key features:
 1. News:
   - Get the latest updates on basketball and American football.
