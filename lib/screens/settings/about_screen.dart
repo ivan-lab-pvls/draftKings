@@ -52,7 +52,7 @@ class _AboutScreenState extends State<AboutScreen> {
                   ),
                   SizedBox(height: 30),
                   Text(
-                    '''DK - Win Online is the perfect sports companion for all basketball and American football enthusiasts. With this app, you can stay updated on the latest news through a user-friendly interface and the option to save your favorite articles.
+                    '''Drew Match Pro is the perfect sports companion for all basketball and American football enthusiasts. With this app, you can stay updated on the latest news through a user-friendly interface and the option to save your favorite articles.
 Key features:
 1. News:
   - Get the latest updates on basketball and American football.
