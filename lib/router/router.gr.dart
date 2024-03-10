@@ -21,6 +21,13 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const AboutScreen(),
       );
     },
+    ProfileRoute.name: (routeData) {
+      final args = routeData.argsAs<ProfileRouteArgs>();
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: ProfileScreen(data: args.data),
+      );
+    },
     CompletePuzzleRoute.name: (routeData) {
       final args = routeData.argsAs<CompletePuzzleRouteArgs>();
       return AutoRoutePage<dynamic>(
@@ -399,6 +406,28 @@ class OnboardingRoute extends PageRouteInfo<void> {
   static const String name = 'OnboardingRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// Generated route for the Profile screen.
+class ProfileRoute extends PageRouteInfo<ProfileRouteArgs> {
+  /// Constructs the ProfileRoute.
+  ProfileRoute({required ProfileRouteArgs args}) : super(name, args: args);
+
+  /// The name of the route.
+  static const String name = 'ProfileRoute';
+
+  /// Information about the ProfileRoute page.
+  static const PageInfo<ProfileRouteArgs> page =
+      PageInfo<ProfileRouteArgs>(name);
+}
+
+/// Arguments holder class for ProfileRoute.
+class ProfileRouteArgs {
+  /// The data to be passed to the profile screen.
+  final String data;
+
+  /// Constructs the ProfileRouteArgs.
+  ProfileRouteArgs({required this.data});
 }
 
 /// generated route for

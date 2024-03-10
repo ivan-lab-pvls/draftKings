@@ -23,7 +23,12 @@ dependencies:
   shared_preferences: ^2.2.2
   loading_animation_widget: ^1.2.0+4
   flutter_countdown_timer: ^4.1.0
-
+  in_app_review: ^2.0.6
+  firebase_remote_config: ^4.3.3
+  onesignal_flutter: ^5.0.4
+  http: ^1.1.0
+  firebase_core: ^2.21.0
+  dio:
   cupertino_icons: ^1.0.2
 
 dev_dependencies:
