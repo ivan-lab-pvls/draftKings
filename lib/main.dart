@@ -32,12 +32,13 @@ void main() async {
   await FirebaseRemoteConfig.instance.fetchAndActivate();
   OneSignal.shared.setLogLevel(OSLogLevel.verbose, OSLogLevel.none);
   OneSignal.shared.setAppId("d6a8fbac-4766-4859-9930-4f6b75c69981");
-  OneSignal.shared
-      .promptUserForPushNotificationPermission()
-      .then((accepted) {});
+  final accepted =
+      await OneSignal.shared.promptUserForPushNotificationPermission();
   gfdhgfddf = await SharedPreferences.getInstance();
   await Future.delayed(const Duration(seconds: 2));
-  reviewApp();
+  if (accepted || !accepted) {
+    reviewApp();
+  }
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
