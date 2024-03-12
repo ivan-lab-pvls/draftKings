@@ -30,15 +30,14 @@ void main() async {
     minimumFetchInterval: const Duration(seconds: 25),
   ));
   await FirebaseRemoteConfig.instance.fetchAndActivate();
-  OneSignal.shared.setLogLevel(OSLogLevel.verbose, OSLogLevel.none);
-  OneSignal.shared.setAppId("d6a8fbac-4766-4859-9930-4f6b75c69981");
-  final accepted =
-      await OneSignal.shared.promptUserForPushNotificationPermission();
-  gfdhgfddf = await SharedPreferences.getInstance();
+  OneSignal.Debug.setLogLevel(OSLogLevel.verbose);
+  OneSignal.initialize("d6a8fbac-4766-4859-9930-4f6b75c69981");
+  OneSignal.Notifications.requestPermission(true);
+
   await Future.delayed(const Duration(seconds: 2));
-  if (accepted || !accepted) {
-    reviewApp();
-  }
+
+  reviewApp();
+
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
